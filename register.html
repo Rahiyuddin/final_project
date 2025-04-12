@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Registration</title>
+
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Page-specific registration styles -->
+  <link rel="stylesheet" href="register.css" />
+  <!-- JavaScript file for form validation and functionality -->
+  <script src="../js/form.js" defer></script>
+</head>
+
+<body>
+  <div class="auth-container">
+
+    <!-- Navigation bar -->
+    <nav>
+      <ul>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="list.html">Flower Shop</a></li>
+      </ul>
+    </nav>
+
+    <main class="auth-main">
+      <div class="auth-card">
+
+        <!-- Page title -->
+        <h1 class="auth-title">Create an Account</h1>
+
+        <!-- Registration form with client-side validation support -->
+        <form id="registrationForm" class="auth-form" novalidate aria-label="Registration form">
+
+          <!-- First Name field (required) -->
+          <div class="form-group">
+            <label for="firstName" class="required">First Name</label>
+            <input type="text" id="firstName" aria-required="true" required />
+            <div class="error-message" id="firstNameError"></div>
+          </div>
+
+          <!-- Last Name field (required) -->
+          <div class="form-group">
+            <label for="lastName" class="required">Last Name</label>
+            <input type="text" id="lastName" aria-required="true" required />
+            <div class="error-message" id="lastNameError"></div>
+          </div>
+
+          <!-- Email field (required) -->
+          <div class="form-group">
+            <label for="email" class="required">Email</label>
+            <input type="email" id="email" aria-required="true" placeholder="example@domain.com" required />
+            <div class="error-message" id="emailError"></div>
+          </div>
+
+          <!-- Phone field (required) -->
+          <div class="form-group">
+            <label for="phone" class="required">Phone</label>
+            <input type="tel" id="phone" aria-required="true" placeholder="(123) 456-7890" required />
+            <div class="error-message" id="phoneError"></div>
+          </div>
+
+          <!-- Optional address field -->
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" />
+          </div>
+
+          <!-- City and Province fields in a row -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" />
+            </div>
+
+            <div class="form-group">
+              <label for="province">Province</label>
+              <select id="province">
+                <option value="">Select</option>
+                <option value="ON">Ontario</option>
+                <option value="QC">Quebec</option>
+                <option value="BC">British Columbia</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Postal Code field (required) -->
+          <div class="form-group">
+            <label for="postal" class="required">Postal Code</label>
+            <input type="text" id="postal" aria-required="true" placeholder="A1A 1A1" required />
+            <div class="error-message" id="postalError"></div>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="auth-button">Register</button>
+        </form>
+
+        <!-- Footer message with login link -->
+        <div class="auth-footer">
+          <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

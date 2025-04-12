@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flower Shop</title>
+
+  <!-- Main CSS file for global styles -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="list.css" />
+  <!-- JavaScript file to handle product display and cart functionality -->
+  <script src="../js/listcart.js" defer></script>
+</head>
+
+<body>
+  <div class="shop-container">
+
+    <!-- Navigation bar -->
+    <nav>
+      <ul>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="list.html" aria-current="page">Shop</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Page Title -->
+      <h1 class="shop-title">Our Beautiful Flowers</h1>
+
+      <!-- Flower product list will be dynamically generated here -->
+      <div class="flower-grid" id="flower-list" role="list" aria-label="Available flowers"></div>
+
+      <!-- Shopping Cart Section -->
+      <section class="cart-section" aria-label="Shopping Cart Section">
+        <h2>Your Shopping Cart</h2>
+
+        <!-- Cart display area -->
+        <div class="cart-container" id="cart" role="region" aria-label="Shopping cart table">
+          <div class="cart-table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Flower</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <!-- Cart items will be populated here by JavaScript -->
+              <tbody id="cart-items"></tbody>
+            </table>
+          </div>
+
+          <!-- Display subtotal, tax, and total -->
+          <div class="cart-totals">
+            <div class="total-row">
+              <span>Subtotal:</span>
+              <span>$<span id="subtotal">0.00</span></span>
+            </div>
+            <div class="total-row">
+              <span>Tax (10%):</span>
+              <span>$<span id="tax">0.00</span></span>
+            </div>
+            <div class="total-row grand-total">
+              <span>Total:</span>
+              <span>$<span id="total">0.00</span></span>
+            </div>
+
+            <!-- Checkout button -->
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+</body>
+
+</html>
